@@ -7,6 +7,10 @@
     padding: 5px;
     border-radius: 4px;
     border: none;
+    color: var(--black);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.507);
+    font-family: var(--font-family);
+    font-weight: 400;
 }
 .search:focus {
     outline: 2px solid var(--primary-hover);

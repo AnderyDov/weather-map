@@ -9,7 +9,7 @@ body {
     font-weight: var(--normal-weight);
     font-style: var(--normal-style);
 }
-button {
+/* button {
     width: 100px;
     height: 30px;
     border-radius: 5px;
@@ -32,7 +32,7 @@ a {
 }
 a:hover {
     color: var(--primary-hover);
-}
+} */
 
 * {
     box-sizing: border-box;
