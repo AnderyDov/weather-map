@@ -24,7 +24,7 @@ const getIcon = (icon) => {
 };
 
 async function getWeather(city: string) {
-    const token = 'fe70cd593344091998b02fd5042bc1a3';
+    const token = '';
     const { data } = await axios.get(
         'https://api.openweathermap.org/data/2.5/weather',
         {
