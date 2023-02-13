@@ -1,0 +1,69 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    color: var(--white);
+    background: var(--bg);
+    font-family: var(--font-family);
+    font-weight: var(--normal-weight);
+    font-style: var(--normal-style);
+}
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: var(--primary);
+    color: var(--black);
+    font-weight: 600;
+}
+button:hover {
+    background: var(--primary-hover);
+}
+button:active {
+    scale: 0.8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+a:hover {
+    color: var(--primary-hover);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff1e3;
+    --black: #1a1b27;
+    --bg: #0d5356;
+    --primary: #00ff90;
+    --primary-hover: #54eaf8;
+    --font-family: 'Noto Sans', sans-serif;
+    --normal-style: normal;
+    --normal-weight: 500;
+}
+
+/* W3C standardко для Firefox */
+* {
+    scrollbar-color: var(--gray) var(--black);
+}
+
+/* Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+*::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 5px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+    border-radius: 5px;
+}
