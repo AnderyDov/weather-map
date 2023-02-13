@@ -1,18 +1,18 @@
 import { FunctionComponent } from 'react';
-// import Footer from './Footer/Footer';
+import Footer from './Footer/Footer';
 // import Header from './Header/Header';
 import styles from './Layout.module.css';
 import { LayoutProps } from './Layout.props';
-// import cn from 'classnames';
 
 function Layout({ children }: LayoutProps): JSX.Element {
     return (
         <div className={styles.layout}>
+            <div className={styles.header}></div>
             {/* <Header className={styles.header} /> */}
             <div className={styles.content} tabIndex={0}>
                 {children}
             </div>
-            {/* <Footer className={styles.footer} /> */}
+            <Footer className={styles.footer} />
         </div>
     );
 }

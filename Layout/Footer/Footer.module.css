@@ -1,0 +1,16 @@
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+.icons {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary);
+}
+.icons:hover {
+    fill: var(--primary-hover);
+}
