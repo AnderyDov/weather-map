@@ -22,7 +22,6 @@ function Home() {
 
     return (
         <div className={styles.home}>
-            <Button onClick={handleFetch}>Показать</Button>
             <div className={styles.weather}>
                 <div>Населённый пунт</div>
                 <div>{weather.name}</div>
@@ -47,6 +46,7 @@ function Home() {
                 <div>Закат</div>
                 <div>{isExist(weather.sys.sunset)}</div>
             </div>
+            <Button onClick={handleFetch}>Показать</Button>
         </div>
     );
 }

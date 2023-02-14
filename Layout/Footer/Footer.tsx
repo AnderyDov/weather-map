@@ -9,6 +9,7 @@ export default function Footer({ className, ...props }: FooterProps) {
     return (
         <footer className={cn(className, styles.footer)} {...props}>
             <a
+                aria-label='Ссылка на телеграмм'
                 target='_blank'
                 rel='noreferrer noopener'
                 href='https://t.me/dovbanAndrey'
@@ -16,6 +17,7 @@ export default function Footer({ className, ...props }: FooterProps) {
                 <Telegram className={styles.icons} />
             </a>
             <a
+                aria-label='Ссылка на почту'
                 target='_blank'
                 rel='noreferrer noopener'
                 href='https://github.com/AnderyDov?tab=repositories'
@@ -23,6 +25,7 @@ export default function Footer({ className, ...props }: FooterProps) {
                 <Git className={styles.icons} />
             </a>
             <a
+                aria-label='Ссылка на gitHub'
                 rel='noreferrer noopener'
                 href='mailto:dovban.andreyy@rambler.ru'
                 target='_blank'
