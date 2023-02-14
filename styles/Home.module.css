@@ -5,12 +5,3 @@
     align-items: center;
     justify-content: space-between;
 }
-.weather {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 10px;
-}
-.weather div {
-    font-size: 14px;
-    font-weight: 200;
-}

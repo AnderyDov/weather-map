@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html lang='ru'>
             <Head>
-                <title>Weathr App</title>
+                <title>Weather App</title>
             </Head>
             <body>
                 <Main />

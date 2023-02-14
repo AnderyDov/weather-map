@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <RecoilRoot>
             <Head>
-                <title>Weathp App</title>
+                <title>Weather App</title>
                 <meta
                     name='description'
                     content='Author: Andrey Dovban, веб приложение для получения текущей погоды'
