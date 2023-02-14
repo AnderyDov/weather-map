@@ -6,6 +6,16 @@ import { useState } from 'react';
 export function Search({ ...props }: SearchProps): JSX.Element {
     const [text, setText] = useState<string>('');
 
+    function handleSearch() {
+        console.log(text.trim());
+    }
+
+    function handleSearchEnter(e) {
+        if (e.code === 'Enter' && text !== '') {
+            console.log(text.trim());
+        }
+    }
+
     return (
         <div className={styles.wrap}>
             <input
@@ -15,11 +25,9 @@ export function Search({ ...props }: SearchProps): JSX.Element {
                 placeholder='Искать населённый пункт'
                 value={text}
                 onChange={(e) => setText(e.target.value)}
+                onKeyDown={handleSearchEnter}
             />
-            <SearchIcon
-                className={styles.icon}
-                onClick={() => console.log(text)}
-            />
+            <SearchIcon className={styles.icon} onClick={handleSearch} />
         </div>
     );
 }

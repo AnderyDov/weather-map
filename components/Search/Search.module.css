@@ -22,4 +22,8 @@
     width: 20px;
     height: 20px;
     fill: var(--gray);
+    cursor: pointer;
+}
+.icon:hover {
+    fill: var(--primary-hover);
 }
