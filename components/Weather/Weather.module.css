@@ -16,6 +16,9 @@
     font-size: 12px;
     font-weight: 200;
 }
+.icon {
+    font-size: 20px;
+}
 .wrap {
     position: relative;
     display: flex;

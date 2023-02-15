@@ -27,7 +27,9 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             <div>
                 {weather.name}
                 {'  '}
-                {getIcon(weather.weather[0].icon)}
+                <span className={styles.icon}>
+                    {getIcon(weather.weather[0].icon)}
+                </span>
             </div>
             <div>Условия</div>
             <div>{weather.weather[0].description}</div>
