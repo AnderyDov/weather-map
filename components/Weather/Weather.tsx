@@ -4,7 +4,7 @@ import { weatherState } from '../../store/atoms';
 import { useRecoilValue } from 'recoil';
 import Arrow from './arrow.svg';
 import Compass from './compass.svg';
-import { getSunTime } from '../../helpers/fomaters';
+import { getSunTime } from '../../helpers/getSunTime';
 
 export function Weather({ ...props }: WeatherProps): JSX.Element {
     const weather = useRecoilValue(weatherState);
