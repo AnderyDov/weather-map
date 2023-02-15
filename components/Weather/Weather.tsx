@@ -4,9 +4,13 @@ import { weatherState } from '../../store/atoms';
 import { useRecoilValue } from 'recoil';
 import Arrow from './arrow.svg';
 import Compass from './compass.svg';
+import { getSunTime } from '../../helpers/fomaters';
 
 export function Weather({ ...props }: WeatherProps): JSX.Element {
     const weather = useRecoilValue(weatherState);
+
+    const sunrise = getSunTime(weather.sys.sunrise, weather.timezone);
+    const sunset = getSunTime(weather.sys.sunset, weather.timezone);
 
     function isExist(num) {
         if (num !== undefined && num !== 11111111111111) {
@@ -33,9 +37,9 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             <div>Влажность</div>
             <div>{isExist(weather.main.humidity)} %</div>
             <div>Восход</div>
-            <div>{isExist(weather.sys.sunrise)}</div>
+            <div>{sunrise}</div>
             <div>Закат</div>
-            <div>{isExist(weather.sys.sunset)}</div>
+            <div>{sunset}</div>
             <div>Скорость ветра</div>
             <div>{isExist(weather.wind.speed)} м/с</div>
             <div>Порывы ветра</div>
