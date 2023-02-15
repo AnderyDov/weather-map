@@ -1,9 +1,30 @@
 .weather {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 0 10px;
 }
 .weather div {
     font-size: 14px;
     font-weight: 200;
+}
+.wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+}
+.compass {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    fill: var(--primary);
+}
+.arrow {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    fill: var(--primary-hover);
 }
