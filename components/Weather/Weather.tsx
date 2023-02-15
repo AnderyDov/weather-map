@@ -24,15 +24,17 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             })}
         >
             <div>Населённый пунт</div>
-            <div>{weather.name}</div>
+            <div>
+                {weather.name}
+                {'  '}
+                {getIcon(weather.weather[0].icon)}
+            </div>
             <div>Условия</div>
             <div>{weather.weather[0].description}</div>
             <div>Координаты</div>
             <div>
                 {weather.coord.lat} {weather.coord.lon}
             </div>
-            <div>иконка</div>
-            <div>{getIcon(weather.weather[0].icon)}</div>
             <div>Температура</div>
             <div>{weather.main.temp} С&deg;</div>
             <div>Ощущается как</div>
