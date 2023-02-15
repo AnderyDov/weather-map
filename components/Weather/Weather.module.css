@@ -3,9 +3,17 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 0 10px;
+    transition: all ease-in-out 0.3s;
+    transform-origin: top;
+}
+.show {
+    scale: 1;
+}
+.hide {
+    scale: 1 0;
 }
 .weather div {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 200;
 }
 .wrap {
