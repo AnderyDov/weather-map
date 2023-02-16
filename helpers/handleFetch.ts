@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import { IGetWeather } from '../interfaces/IGetWeather';
 
-export async function handleFetch(city: string, setWeather) {
+export async function handleFetch(city: string, setWeather, setError) {
     if (city.trim() === '') {
         return;
     }
@@ -9,12 +9,14 @@ export async function handleFetch(city: string, setWeather) {
         const { data } = await axios.post<IGetWeather>('/api/getweather', {
             city,
         });
+
         setWeather(data);
+        setError('');
     } catch (err: unknown) {
         if (err instanceof AxiosError) {
-            console.log(err.message);
+            setError(err.response?.data.message);
         } else {
-            err;
+            console.log(err);
         }
     }
 }
