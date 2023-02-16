@@ -1,12 +1,14 @@
 .weather {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 80px 50px 1fr;
     grid-template-areas:
         'na na wr'
+        'co co wr'
         'te ic de'
         'te ic fe'
         'sp hu pr'
-        'sr . ss';
+        'su su su';
+
     align-items: center;
     gap: 5px;
     padding: 10px;
@@ -19,7 +21,15 @@
 .name {
     grid-area: na;
     font-size: 16px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: self-end;
+}
+.coord {
+    grid-area: co;
+    display: flex;
+    align-self: start;
+    justify-content: center;
 }
 .wrap {
     grid-area: wr;
@@ -56,15 +66,30 @@
 .pressure {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .pressure {
     grid-area: pr;
 }
+.sunway {
+    position: relative;
+    grid-area: su;
+    padding: 5px 20px;
+    fill: var(--primary);
+}
+.sunway svg {
+    scale: 1 0.8;
+}
 .sunrise {
+    position: absolute;
+    bottom: 2px;
+    left: 9%;
     grid-area: sr;
 }
 .sunset {
+    position: absolute;
+    bottom: 2px;
+    right: 9%;
     grid-area: ss;
 }
 
@@ -79,7 +104,7 @@
     width: 35px;
     height: 35px;
     fill: var(--white);
-    animation: shake 2s 35 3s alternate;
+    animation: shake 2s infinite 3s alternate;
 }
 @keyframes shake {
     0% {
@@ -95,6 +120,7 @@
         transform: rotate(5deg);
     }
 }
+
 .icon_min {
     width: 14px;
     height: 14px;

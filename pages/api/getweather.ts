@@ -19,7 +19,6 @@ async function getWeather(city: string) {
 }
 
 export default async function handler(req, res) {
-    console.log(req.body);
     if (req.body.city && req.body.city !== '') {
         try {
             const weather: IGetWeather = await getWeather(req.body.city.trim());
@@ -30,7 +29,6 @@ export default async function handler(req, res) {
                 err.response?.data?.cod === '404'
             ) {
                 res.status(404).json({
-                    cod: '404',
                     message: 'Такой населённый пункт не найден',
                 });
             } else if (
@@ -38,12 +36,10 @@ export default async function handler(req, res) {
                 err.response?.data?.cod === 401
             ) {
                 res.status(401).json({
-                    cod: '401',
                     message: 'Проблемы с сесрвером попробуйте позже',
                 });
             } else {
                 res.status(408).json({
-                    cod: '408',
                     message: 'Что пошло не так попробуйте позже',
                 });
             }

@@ -14,6 +14,7 @@ import cn from 'classnames';
 import Drop from './drop.svg';
 import Wind from './wind.svg';
 import Pressure from './pressure.svg';
+import SunWay from './sunway.svg';
 
 export function Weather({ ...props }: WeatherProps): JSX.Element {
     const city = useRecoilValue<string>(cityState);
@@ -31,6 +32,9 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             })}
         >
             <div className={styles.name}>{weather.name}</div>
+            <div className={styles.coord}>
+                {weather.coord.lat}&nbsp;{weather.coord.lon}
+            </div>
             <div className={styles.wrap}>
                 <Compass className={styles.compass} />
                 <Arrow
@@ -60,8 +64,11 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
                 <Pressure className={styles.icon_min} />
                 {convertPressure(weather.main.pressure)}&nbsp;мм тр ст
             </div>
-            <div className={styles.sunrise}>{sunrise}</div>
-            <div className={styles.sunset}>{sunset}</div>
+            <div className={styles.sunway}>
+                <SunWay />
+                <div className={styles.sunrise}>{sunrise}</div>
+                <div className={styles.sunset}>{sunset}</div>
+            </div>
         </div>
     );
 }
