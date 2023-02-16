@@ -46,6 +46,7 @@
 }
 .speed {
     grid-area: sp;
+    word-wrap: break-word;
 }
 .humidity {
     grid-area: hu;
@@ -78,6 +79,21 @@
     width: 35px;
     height: 35px;
     fill: var(--white);
+    animation: shake 2s 35 3s alternate;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(-5deg);
+    }
+    66% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
 }
 .icon_min {
     width: 14px;
