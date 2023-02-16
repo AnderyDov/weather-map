@@ -4,8 +4,7 @@ import { cityState, weatherState } from '../../store/atoms';
 import { useRecoilValue } from 'recoil';
 import Arrow from './arrow.svg';
 import Compass from './compass.svg';
-import { getSunTime } from '../../helpers/getSunTime';
-import { getIcon } from '../../helpers/getIcons';
+import { getSunTime, getIcon, windDirection } from '../../helpers';
 import cn from 'classnames';
 
 export function Weather({ ...props }: WeatherProps): JSX.Element {
@@ -53,7 +52,7 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             <div>{weather.wind.speed} м/с</div>
             <div>Порывы ветра</div>
             <div>{weather.wind.gust} м/с</div>
-            <div>Направление ветра</div>
+            <div>Направление ветра {windDirection(weather.wind.deg)}</div>
             <div className={styles.wrap}>
                 <Compass className={styles.compass} />
                 <Arrow

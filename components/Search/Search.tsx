@@ -3,7 +3,7 @@ import { SearchProps } from './Search.props';
 import SearchIcon from './search.svg';
 import { useRecoilState } from 'recoil';
 import { cityState, weatherState } from '../../store/atoms';
-import { handleFetch } from '../../helpers/handleFetch';
+import { handleFetch } from '../../helpers';
 
 export function Search({ ...props }: SearchProps): JSX.Element {
     const [city, setCity] = useRecoilState<string>(cityState);

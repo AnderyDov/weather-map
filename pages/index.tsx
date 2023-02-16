@@ -4,7 +4,7 @@ import { Button } from '../components';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { weatherState, cityState } from '../store/atoms';
 import { Weather } from '../components';
-import { handleFetch } from '../helpers/handleFetch';
+import { handleFetch } from '../helpers';
 
 function Home() {
     const city = useRecoilValue<string>(cityState);
