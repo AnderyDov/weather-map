@@ -9,6 +9,11 @@ body {
     font-weight: var(--normal-weight);
     font-style: var(--normal-style);
 }
+body {
+    background: url(../images/fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 * {
     box-sizing: border-box;
@@ -17,7 +22,7 @@ body {
 :root {
     --white: #ffffff;
     --black: #1a1b27;
-    --bg: #0d5356;
+    --bg: #0d545699;
     --gray: rgb(89, 89, 89);
     --primary: #00ff90;
     --primary-hover: #0026ff;

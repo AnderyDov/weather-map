@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 15px;
     padding: 10px;
+    background: var(--bg);
 }
 .icons {
     width: 20px;

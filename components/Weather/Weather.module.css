@@ -1,25 +1,28 @@
 .weather {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'na na wr'
+        'te ic de'
+        'te ic fe'
+        'sp hu pr'
+        'sr . ss';
     align-items: center;
-    gap: 0 10px;
+    gap: 5px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
     transition: all ease-in-out 0.3s;
     transform-origin: top;
+    background: var(--bg);
 }
-.show {
-    scale: 1;
-}
-.hide {
-    scale: 1 0;
-}
-.weather div {
-    font-size: 12px;
-    font-weight: 200;
-}
-.icon {
-    font-size: 20px;
+.name {
+    grid-area: na;
+    font-size: 16px;
+    text-align: center;
 }
 .wrap {
+    grid-area: wr;
     position: relative;
     display: flex;
     align-items: center;
@@ -27,6 +30,43 @@
     width: 70px;
     height: 70px;
 }
+.temp {
+    grid-area: te;
+    font-size: 24px;
+}
+.icon {
+    font-size: 20px;
+    grid-area: ic;
+}
+.description {
+    grid-area: de;
+}
+.feel {
+    grid-area: fe;
+}
+.speed {
+    grid-area: sp;
+}
+.humidity {
+    grid-area: hu;
+}
+.speed,
+.humidity,
+.pressure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pressure {
+    grid-area: pr;
+}
+.sunrise {
+    grid-area: sr;
+}
+.sunset {
+    grid-area: ss;
+}
+
 .compass {
     position: absolute;
     width: 70px;
@@ -38,4 +78,21 @@
     width: 35px;
     height: 35px;
     fill: var(--white);
+}
+.icon_min {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    fill: var(--white);
+}
+
+.show {
+    scale: 1;
+}
+.hide {
+    scale: 1 0;
+}
+.weather {
+    font-size: 12px;
+    font-weight: 200;
 }
