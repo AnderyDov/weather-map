@@ -15,6 +15,7 @@ import Drop from './drop.svg';
 import Wind from './wind.svg';
 import Pressure from './pressure.svg';
 import SunWay from './sunway.svg';
+import { dayLength } from '../../helpers/dayLength';
 
 export function Weather({ ...props }: WeatherProps): JSX.Element {
     const city = useRecoilValue<string>(cityState);
@@ -22,6 +23,7 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
 
     const sunrise = getSunTime(weather.sys.sunrise, weather.timezone);
     const sunset = getSunTime(weather.sys.sunset, weather.timezone);
+    const lengthDay = dayLength(weather.sys.sunrise, weather.sys.sunset);
 
     return (
         <div
@@ -68,6 +70,7 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
             <div className={styles.sunway}>
                 <SunWay />
                 <div className={styles.sunrise}>{sunrise}</div>
+                <div className={styles.lengthday}>{lengthDay}</div>
                 <div className={styles.sunset}>{sunset}</div>
             </div>
         </div>

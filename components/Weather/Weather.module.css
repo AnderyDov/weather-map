@@ -88,6 +88,12 @@
     right: 9%;
     grid-area: ss;
 }
+.lengthday {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% 0;
+}
 
 .compass {
     position: absolute;
