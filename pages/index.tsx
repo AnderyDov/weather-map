@@ -14,7 +14,10 @@ function Home() {
     return (
         <div className={styles.home}>
             <Weather />
-            <Button onClick={() => handleFetch(city, setWeather, setError)}>
+            <Button
+                className={styles.button}
+                onClick={() => handleFetch(city, setWeather, setError)}
+            >
                 Показать
             </Button>
         </div>

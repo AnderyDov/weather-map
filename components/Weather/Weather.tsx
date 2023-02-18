@@ -33,7 +33,8 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
         >
             <div className={styles.name}>{weather.name}</div>
             <div className={styles.coord}>
-                {weather.coord.lat}&nbsp;{weather.coord.lon}
+                {weather.coord.lat.toFixed(4)}&nbsp;
+                {weather.coord.lon.toFixed(4)}
             </div>
             <div className={styles.wrap}>
                 <Compass className={styles.compass} />

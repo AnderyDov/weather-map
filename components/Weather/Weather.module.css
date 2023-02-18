@@ -1,12 +1,13 @@
 .weather {
     display: grid;
-    grid-template-columns: 80px 50px 1fr;
+    grid-template-columns: auto 50px 1fr;
     grid-template-areas:
-        'na na wr'
-        'co co wr'
+        'na . co'
         'te ic de'
         'te ic fe'
-        'sp hu pr'
+        'sp sp wr'
+        'hu hu wr'
+        'pr pr wr'
         'su su su';
 
     align-items: center;
@@ -21,15 +22,10 @@
 .name {
     grid-area: na;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-self: self-end;
+    text-align: center;
 }
 .coord {
     grid-area: co;
-    display: flex;
-    align-self: start;
-    justify-content: center;
 }
 .wrap {
     grid-area: wr;

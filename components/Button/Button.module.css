@@ -5,6 +5,7 @@
     appearance: none;
     background: var(--primary);
     padding: 10px 30px;
+    margin-bottom: 5px;
     border: none;
     cursor: pointer;
     outline: none;

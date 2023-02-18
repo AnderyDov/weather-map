@@ -49,7 +49,7 @@ export const defaultDatas = {
 
 export const errorState = atom({
     key: 'errorState',
-    default: 'defalt error',
+    default: '',
 });
 
 export const cityState = atom({
