@@ -13,9 +13,9 @@ export default function Header({
     const error = useRecoilValue(errorState);
 
     return (
-        <div className={cn(className, styles.header)} {...props}>
+        <header className={cn(className, styles.header)} {...props}>
             <Search />
             <Error>{error}</Error>
-        </div>
+        </header>
     );
 }

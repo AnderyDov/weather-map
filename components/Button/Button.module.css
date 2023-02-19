@@ -1,7 +1,8 @@
 .button {
+    position: absolute;
+    bottom: 10px;
     color: var(--gray);
     font-weight: 600;
-    position: relative;
     appearance: none;
     background: var(--primary);
     padding: 10px 30px;

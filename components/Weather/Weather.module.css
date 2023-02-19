@@ -1,4 +1,5 @@
 .weather {
+    position: absolute;
     display: grid;
     grid-template-columns: auto 50px 1fr;
     grid-template-areas:
