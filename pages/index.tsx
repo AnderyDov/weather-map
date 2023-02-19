@@ -5,23 +5,21 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { weatherState, cityState, errorState } from '../store/atoms';
 import { Weather } from '../components';
 import { handleFetch } from '../helpers';
-import Script from 'next/script';
+import { Map } from '@pbe/react-yandex-maps';
 
 function Home() {
     const city = useRecoilValue<string>(cityState);
-    const [, setWeather] = useRecoilState(weatherState);
+    const [weather, setWeather] = useRecoilState(weatherState);
     const [, setError] = useRecoilState(errorState);
 
     return (
         <>
-            <Script
-                src='https://api-maps.yandex.ru/2.1/?apikey=KEY=ru_RU'
-                type='text/javascript'
-            ></Script>
-
             <div className={styles.home}>
                 <Weather />
-                <div id='map' className={styles.map}></div>
+                <Map
+                    className={styles.map}
+                    defaultState={{ center: [55.75, 37.57], zoom: 5 }}
+                />
                 <Button
                     className={styles.button}
                     onClick={() => handleFetch(city, setWeather, setError)}
