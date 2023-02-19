@@ -1,25 +1,31 @@
 import withLayout from '../Layout/Layout';
 import styles from '../styles/Home.module.css';
+import { useMemo } from 'react';
 import { Button } from '../components';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { weatherState, cityState, errorState } from '../store/atoms';
 import { Weather } from '../components';
 import { handleFetch } from '../helpers';
-import { Map } from '@pbe/react-yandex-maps';
+import { GeolocationControl, Map } from '@pbe/react-yandex-maps';
 
 function Home() {
     const city = useRecoilValue<string>(cityState);
     const [weather, setWeather] = useRecoilState(weatherState);
     const [, setError] = useRecoilState(errorState);
 
+    const mapState = useMemo(
+        () => ({ center: [weather.coord.lat, weather.coord.lon], zoom: 9 }),
+        [weather],
+    );
+
     return (
         <>
             <div className={styles.home}>
                 <Weather />
-                <Map
-                    className={styles.map}
-                    defaultState={{ center: [55.75, 37.57], zoom: 5 }}
-                />
+
+                <Map className={styles.map} state={mapState}>
+                    <GeolocationControl options={{ float: 'left' }} />
+                </Map>
                 <Button
                     className={styles.button}
                     onClick={() => handleFetch(city, setWeather, setError)}

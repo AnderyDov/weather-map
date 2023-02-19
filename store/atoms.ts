@@ -2,8 +2,8 @@ import { atom } from 'recoil';
 
 export const defaultDatas = {
     coord: {
-        lon: 0,
-        lat: 0,
+        lon: 37.57,
+        lat: 55.75,
     },
     weather: [
         {
