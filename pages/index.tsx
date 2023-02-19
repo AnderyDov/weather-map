@@ -15,9 +15,10 @@ function Home() {
     return (
         <>
             <Script
-                src='https://api-maps.yandex.ru/2.1/?apikey=6d3f12f6-aef9-43a6-a39a-dbe5026d759d&lang=ru_RU'
+                src='https://api-maps.yandex.ru/2.1/?apikey=KEY=ru_RU'
                 type='text/javascript'
             ></Script>
+
             <div className={styles.home}>
                 <Weather />
                 <div id='map' className={styles.map}></div>
