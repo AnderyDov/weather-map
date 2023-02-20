@@ -1,6 +1,4 @@
 .button {
-    position: absolute;
-    bottom: 10px;
     color: var(--gray);
     font-weight: 600;
     appearance: none;
@@ -12,7 +10,6 @@
     outline: none;
     overflow: hidden;
     border-radius: 100px;
-    z-index: 0;
     transition: color 0.3s ease;
 }
 .button:hover {

@@ -27,10 +27,16 @@ function Home() {
                     <GeolocationControl options={{ float: 'right' }} />
                 </Map>
                 <Button
-                    className={styles.button}
+                    className={styles.current}
                     onClick={() => handleFetch(city, setWeather, setError)}
                 >
-                    Показать
+                    Погода сейчас
+                </Button>
+                <Button
+                    className={styles.week}
+                    onClick={() => handleFetch(city, setWeather, setError)}
+                >
+                    Прогноз на неделю
                 </Button>
             </div>
         </>
