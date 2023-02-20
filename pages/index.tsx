@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { Button } from '../components';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { weatherState, cityState, errorState } from '../store/atoms';
-import { Weather } from '../components';
+import { Weather, WeekWeather } from '../components';
 import { handleFetch } from '../helpers';
 import { GeolocationControl, Map } from '@pbe/react-yandex-maps';
 
@@ -22,9 +22,9 @@ function Home() {
         <>
             <div className={styles.home}>
                 <Weather />
-
+                <WeekWeather />
                 <Map className={styles.map} state={mapState}>
-                    <GeolocationControl options={{ float: 'left' }} />
+                    <GeolocationControl options={{ float: 'right' }} />
                 </Map>
                 <Button
                     className={styles.button}

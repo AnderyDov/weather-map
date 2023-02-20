@@ -113,13 +113,13 @@
         transform: rotate(0deg);
     }
     33% {
-        transform: rotate(-5deg);
+        transform: rotate(-9deg);
     }
     66% {
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(5deg);
+        transform: rotate(9deg);
     }
 }
 
@@ -139,4 +139,10 @@
 .weather {
     font-size: 12px;
     font-weight: 200;
+}
+@media (min-width: 640px) {
+    .weather {
+        left: 0;
+        top: 0;
+    }
 }

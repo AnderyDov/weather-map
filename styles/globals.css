@@ -11,6 +11,7 @@ body {
 }
 body {
     background: url(../images/fon.jpg);
+    background-position: bottom left;
     background-repeat: no-repeat;
     background-size: cover;
 }
