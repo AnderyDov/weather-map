@@ -22,7 +22,7 @@ function Home() {
         <>
             <div className={styles.home}>
                 <Weather />
-                <WeekWeather />
+                {/* <WeekWeather /> */}
                 <Map className={styles.map} state={mapState}>
                     <GeolocationControl options={{ float: 'right' }} />
                 </Map>
@@ -32,12 +32,12 @@ function Home() {
                 >
                     Погода сейчас
                 </Button>
-                <Button
+                {/* <Button
                     className={styles.week}
                     onClick={() => handleFetch(city, setWeather, setError)}
                 >
                     Прогноз на неделю
-                </Button>
+                </Button> */}
             </div>
         </>
     );
