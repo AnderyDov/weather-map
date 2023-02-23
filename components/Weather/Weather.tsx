@@ -45,7 +45,9 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
                     style={{ rotate: `${weather.wind.deg}deg` }}
                 />
             </div>
-            <div className={styles.temp}>{weather.main.temp}&deg;</div>
+            <div className={styles.temp}>
+                {Math.round(weather.main.temp)}&deg;
+            </div>
             <div className={styles.icon}>
                 {getIcon(weather.weather[0].icon)}
             </div>
@@ -53,7 +55,8 @@ export function Weather({ ...props }: WeatherProps): JSX.Element {
                 {weather.weather[0].description}
             </div>
             <div className={styles.feel}>
-                ощущается&nbsp;как&nbsp;{weather.main.feels_like}&deg;
+                ощущается&nbsp;как&nbsp;{Math.round(weather.main.feels_like)}
+                &deg;
             </div>
             <div className={styles.speed}>
                 <Wind className={styles.icon_min} /> {weather.wind.speed} м/с,{' '}
