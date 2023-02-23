@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    image: weather-map
+    container_name: weather-map
+    restart: always
+    ports:
+      - 3100:3100
